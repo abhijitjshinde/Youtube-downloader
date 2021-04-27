@@ -1,0 +1,60 @@
+Screen:
+
+    ScrollView:
+        
+        MDBoxLayout:
+            orientation: 'vertical'
+            adaptive_height: True
+            padding: dp(48)
+            spacing: dp(15)            
+            MDLabel:
+                text: "YT DOWNLOADER"
+                theme_text_color: "Custom"
+                text_color: 10/255, 62/255, 84/255, 1
+                halign: "center"
+            MDTextField:
+                id: url
+                hint_text: "YT URL"
+                mode: "rectangle"
+            MDDropDownItem:
+                id: drop_item
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                text: 'Quality'
+                on_release: app.dropme()
+            MDRectangleFlatButton:
+                text: "Download"
+                text_color: 1, 1, 1, 1
+                md_bg_color: 10/255, 201/255, 43/255, 1
+                pos_hint: {"center_x": .5, "center_y": .1}
+                on_release:
+                    app.download_video(root.ids.url.text,root.ids.drop_item.text)
+            MDLabel:
+                text: "                           "
+                theme_text_color: "Custom"
+                text_color: 240/255, 0/255, 12/255, 1
+                halign: "center"
+            MDLabel:
+                text: "                "
+                theme_text_color: "Custom"
+                text_color: 240/255, 0/255, 12/255, 1
+                halign: "center"
+            MDLabel:
+                text: "1) Do NOT USE THIS APP FOR VOILATION OF ANY DISCIPLINE"
+                theme_text_color: "Custom"
+                text_color: 240/255, 0/255, 12/255, 1
+                halign: "center"            
+            MDLabel:
+                text: "              "
+                theme_text_color: "Custom"
+                text_color: 240/255, 0/255, 12/255, 1
+                halign: "center"
+            MDLabel:
+                text: "         "
+                theme_text_color: "Custom"
+                text_color: 240/255, 0/255, 12/255, 1
+                halign: "center"
+            MDLabel:
+                text: "2) FOR FURTHER ACTIONS WE ARE NOT RESPONSIBLE"
+                theme_text_color: "Custom"
+                text_color: 240/255, 0/255, 12/255, 1
+                halign: "center"            
